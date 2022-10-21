@@ -1,0 +1,32 @@
+<%- include("header"); -%>
+
+<h1>Hero</h1>
+<img src=<%=heroes.image.url%> alt="hero" />
+<h1>ID: <%=heroes.id%></h1>
+<h2>Name: <%= heroes.name %></h2>
+<h2>Full Name: <%= heroes.biography["full-name"] %></h2>
+<h3>Powerstats</h3>
+<p>Intelligence: <%=heroes.powerstats.intelligence%></p>
+<p>Strength: <%=heroes.powerstats.strength%></p>
+<p>Speed: <%=heroes.powerstats.speed%></p>
+<p>Durability: <%=heroes.powerstats.durability%></p>
+<p>Power: <%=heroes.powerstats.power%></p>
+<p>Combat: <%=heroes.powerstats.combat%></p>
+<p>Place of birth: <%=heroes.biography["place-of-birth"]%></p>
+<p>Aliases: 
+    <% heroes.biography.aliases.forEach(function(alias){ %>
+        <p><%= alias %></p> 
+    
+    <% }) %> 
+</p>
+<p>Gender: <%=heroes.appearance.gender%></p>
+<p>Race: <%=heroes.appearance.race%></p>
+<p>Height: <%=heroes.appearance.height%></p>
+<p>Weight: <%=heroes.appearance.weight%></p>
+<p>Eye-color: <%=heroes.appearance["eye-color"]%></p>
+<p>Hair-color: <%=heroes.appearance["hair-color"]%></p>
+<p>Group affiliation: <%=heroes.connections["group-affiliation"]%></p>
+
+<a href="/">Go back</a>
+
+<%- include("footer"); -%>

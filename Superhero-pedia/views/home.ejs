@@ -1,0 +1,9 @@
+<%- include("header"); -%>
+<h1>Heroes:</h1>
+<p> 
+    <% posts.forEach(function(post){ %>
+        <img src=<%=post%> alt="hero" />
+    <% }); %> 
+</p>
+
+<%- include("footer"); -%>
